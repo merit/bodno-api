@@ -13,7 +13,7 @@ DATABASE = settings.DATABASE
 SQLALCHEMY_DATABASE_URL=f"mysql://{DATABASE_USER}:{str(DATABASE_PASSWORD)}@{DATABASE_HOST}/{DATABASE}"
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL
+    SQLALCHEMY_DATABASE_URL, pool_recycle=3600
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
