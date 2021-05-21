@@ -12,6 +12,7 @@ class BadgeBase(BaseModel):
     category: Optional[str] = None
     background: Optional[str] = None
     headshot_id: Optional[str] = None
+    position: Optional[str] = None
 
 class BadgeCreate(BadgeBase):
     pass

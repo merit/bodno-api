@@ -15,6 +15,7 @@ class Badge(Base):
     category = Column(String(255), nullable=True)
     background = Column(String(255), nullable=True)
     headshot_id = Column(String(255), nullable=True)
+    position = Column(String(255), nullable=True)
 
     __table_args__ = (UniqueConstraint('site', 'email', __name__ = '_site_email_uc'),
                      )
